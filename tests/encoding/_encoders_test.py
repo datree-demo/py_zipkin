@@ -3,12 +3,12 @@ import socket
 import mock
 import pytest
 
-from py_zipkin.encoding._helpers import create_endpoint
+from py_zipkin import Encoding
+from py_zipkin.encoding._encoders import _V1JSONEncoder
+from py_zipkin.encoding._encoders import _V1ThriftEncoder
 from py_zipkin.encoding._encoders import get_encoder
 from py_zipkin.encoding._encoders import IEncoder
-from py_zipkin.encoding._encoders import _V1ThriftEncoder
-from py_zipkin.encoding._encoders import _V1JSONEncoder
-from py_zipkin import Encoding
+from py_zipkin.encoding._helpers import create_endpoint
 from py_zipkin.exception import ZipkinError
 
 
